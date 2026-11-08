@@ -546,7 +546,7 @@ vertical-align: middle;
 
 .benefit-card {
     width: 420px;
-    height: 218px;
+    height: 248px;
     flex: 1;
     background-color: #edf2f8;
     text-align: left;
@@ -891,9 +891,9 @@ text-align: center;
 .integration-center::after {
     content: "";
     position: absolute;
-    width: 95px;
+    width: 60px;
     border-top: 2px dashed #D1D9E8;
-    right: 13px;
+    right: 17px;
     top: 50%;
 }
 
@@ -903,7 +903,7 @@ text-align: center;
     left: -50px;
     border-left: 2px dashed #D1D9E8;
     top: 18px;
-height: calc(100% - 38px);
+    height: calc(100% - 38px);
 }
 
 .integration-circle i {
@@ -962,7 +962,7 @@ padding-left: 8.68px;
 .platform-logo::before {
     content: "";
     position: absolute;
-    width: 150px;
+    width: 110px;
     border-top: 2px dashed #D1D9E8;
     right: 100%;
     top: 50%;
@@ -1072,16 +1072,19 @@ padding-left: 8.68px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    margin-top: 12px;
+    width: fit-content;
+    gap: 5px;
+    margin: 12px auto 0;
     font-size: 9px;
     color: #999;
+    white-space: nowrap;
 }
 
 .powered img {
     width: 13px;
     height: 13px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .powered u {
@@ -2456,3 +2459,156 @@ text-align: center;
 
 }
 
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+/* Smooth transitions */
+.nav-buttons a,
+.nav-buttons button,
+.nav-links a,
+.template-btn,
+.email-box button,
+.cta-form button,
+.plan-btn,
+.widget-item,
+.social-card,
+.benefit-card,
+.template-card,
+.feature-card,
+.review-card,
+.pricing-card,
+.platform-logos img,
+.story-image img,
+.video-thumbnail > img,
+.footer-column a,
+.powered u {
+    transition: all 0.3s ease;
+}
+
+/* Navbar Links */
+.nav-links a:hover,
+.nav-buttons a:hover {
+    color: #087AFF;
+}
+
+/* Navbar Button */
+.nav-buttons button:hover,
+.email-box button:hover,
+.cta-form button:hover {
+    background-color: #004fc4;
+}
+
+/* Widget Items */
+.widget-item:hover {
+    background-color: #f0f4fa;
+    color: #087cff;
+}
+
+.widget-item:hover .widget-icon {
+    background-color: #087cff;
+}
+
+/* Social Cards */
+.social-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* Benefit Cards */
+.benefit-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* Template Button */
+.template-btn:hover {
+    background-color: #004fc4;
+    transform: translateY(-3px);
+}
+
+/* Template Cards */
+.template-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.20);
+}
+
+/* Integration Logos */
+.platform-logos img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Video Thumbnail */
+.video-thumbnail > img:hover {
+    filter: brightness(0.88);
+}
+
+/* Review Cards */
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* Story Images */
+.story-image img:hover {
+    transform: scale(1.025);
+}
+
+/* Pricing Cards */
+/* Existing pricing hover effect is already present */
+
+/* Pricing Buttons */
+/* Existing plan button hover effect is already present */
+
+/* FAQ */
+/* Existing FAQ hover effect is already present */
+
+/* CTA Button */
+.cta-form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Footer Links */
+.footer-column a:hover {
+    color: #66aaff;
+    padding-left: 4px;
+}
+
+/* Powered By Link */
+.powered u:hover {
+    color: #087AFF;
+}
+
+/* Keyboard Focus */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+    outline: 2px solid #087AFF;
+    outline-offset: 3px;
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
